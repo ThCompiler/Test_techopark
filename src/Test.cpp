@@ -1,4 +1,4 @@
-#include "../include/Test.h"
+#include "Test.h"
 
 namespace program {
     void TestingString::testing() {
@@ -49,19 +49,20 @@ namespace program {
 
     void TestingString::show_menu() {
         std::cout << "You can do this things:\n";
-        std::cout << "1 - Enter text from keydoard\n";
-        std::cout << "2 - Show text on screan\n";
+        std::cout << "1 - Enter text from keyboard\n";
+        std::cout << "2 - Show text on screen\n";
         std::cout << "3 - Read text from file\n";
-        std::cout << "4 - Write text ro file\n";
-        std::cout << "5 - Show the n element of the i string\n";
-        std::cout << "6 - Change the n element of the i string\n";
-        std::cout << "7 - Delete the n element of the i string\n";
-        std::cout << "8 - Add in the n element of the i string\n";
+        std::cout << "4 - Write text to file\n";
+        std::cout << "5 - Show element number 'n' of the string number 'i'\n";
+        std::cout << "6 - Change element number 'n' of the string number 'i'\n";
+        std::cout << "7 - Delete element number 'n' of the string number 'i'\n";
+        std::cout << "8 - Add element on position number 'n' of the string number 'i'\n";
         std::cout << "9 - Clear console\n";
         std::cout << "e - Exit\n";
     }
 
     void TestingString::read_from_file() {
+        _text.clear();
         std::cout << "Enter name of file\n";
 
         std::string file_name;
@@ -102,6 +103,7 @@ namespace program {
     void TestingString::read_from_console() {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        _text.clear();
 
         std::cout << "Last string of input must be a string starting with a tab character\n";
 
@@ -166,8 +168,7 @@ namespace program {
         _text[id.first][id.second] = new_val;
     }
 
-    std::pair<size_t, size_t> TestingString::get_id_element() const
-    {
+    std::pair<size_t, size_t> TestingString::get_id_element() const {
         size_t i = 0;
         size_t j = 0;
 

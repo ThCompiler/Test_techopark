@@ -17,11 +17,15 @@ namespace program {
 
         std::string& operator[](size_t id);
 
-        void pop();
+        void pop_back();
+
+        void push_back(std::string s);
 
         void delete_pole(size_t id);
 
         void add_pole(size_t id, std::string new_str);
+
+        void clear();
 
         size_t size() const;
 

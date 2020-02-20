@@ -1,4 +1,4 @@
-#include "../include/String.h"
+#include "String.h"
 
 namespace program {
     String::String(std::string s) {
@@ -33,8 +33,12 @@ namespace program {
         return _string[id];
     }
 
-    void String::pop() {
+    void String::pop_back() {
         return _string.pop_back();
+    }
+
+    void String::push_back(std::string s) {
+        return _string.push_back(s);
     }
 
     void String::delete_pole(size_t id) {
@@ -52,8 +56,11 @@ namespace program {
         _string.emplace(_string.begin() + id, new_str);
     }
 
-    size_t String::size() const
-    {
+    void String::clear() {
+        _string.clear();
+    }
+
+    size_t String::size() const {
         return _string.size();
     }
 

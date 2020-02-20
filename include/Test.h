@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include <cstdlib>
 #include "String.h"
 
 namespace program {
