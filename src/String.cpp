@@ -1,7 +1,7 @@
-#include "String.h"
+#include "../include/String.h"
 
 namespace program {
-    explicit String::String(std::string s) {
+    String::String(std::string s) {
         size_t i  = 0;
         size_t id = 0;
 

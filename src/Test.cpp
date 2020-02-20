@@ -1,4 +1,4 @@
-#include "Test.h"
+#include "../include/Test.h"
 
 namespace program {
     void TestingString::testing() {
@@ -44,6 +44,7 @@ namespace program {
             }
             show_menu();
         }
+        std::cout << "Bye)\n";
     }
 
     void TestingString::show_menu() {
